@@ -13,8 +13,7 @@ public class Node
     {
         // TODO Start Problem 1
         // If the value already exists, do nothing (no duplicates allowed)
-        if (value == Data)
-            return;
+        
 
         if (value < Data)
         {
@@ -37,21 +36,12 @@ public class Node
     public bool Contains(int value)
     {
         // TODO Start Problem 2
-        if (value == Data)
-            return true;
-        else if (value < Data && Left != null)
-            return Left.Contains(value);
-        else if (value > Data && Right != null)
-            return Right.Contains(value);
-        else
+        
             return false;
     }
 
     public int GetHeight()
     {
-        // TODO Start Problem 4
-        int leftHeight = Left?.GetHeight() ?? 0;
-        int rightHeight = Right?.GetHeight() ?? 0;
-        return 1 + Math.Max(leftHeight, rightHeight);
+        return 0;
     }
 }
